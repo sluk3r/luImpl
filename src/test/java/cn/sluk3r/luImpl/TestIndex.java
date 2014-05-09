@@ -4,6 +4,7 @@
 package cn.sluk3r.luImpl;
 
 
+import cn.sluk3r.luImpl.analysis.WhitespaceAnalyzer;
 import cn.sluk3r.luImpl.document.Document;
 import cn.sluk3r.luImpl.document.Field;
 import org.junit.Test;
@@ -17,9 +18,9 @@ import cn.sluk3r.luImpl.store.RAMDirectory;
 
 public class TestIndex {
 
-    @Test
+//    @Test
     public void testDemo() {
-        Analyzer analyzer = new StandardAnalyzer();
+        Analyzer analyzer = new WhitespaceAnalyzer();
 
         // Store the index in memory:
         Directory directory = new RAMDirectory();
